@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Birdie's Cone Pies</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Lobster|Pacifico|Tajawal:500&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        border: #ffe600 solid 1rem;
+        border-top-width: 6rem;
+        min-height: 100vh;
+      }
+      /* main {
+        height: calc(100vh - 7rem);
+        overflow-y: auto;
+      } */
+
+      .logo,
+      .cloudline {
+        background: url(./assets/logo-with-tagline.png) no-repeat center center;
+        background: url(./assets/logo-with-tagline.svg) no-repeat center center;
+        background-size: contain;
+        height: 40vmin;
+        width: 80vmin;
+        margin: -3vmin auto 1rem;
+        max-width: 900px;
+      }
+
+      .cloudline {
+        background: url(./assets/cloudline.svg) no-repeat center top;
+        position: absolute;
+        z-index: 0;
+        top: 3rem;
+        height: 4rem;
+        background-size: cover;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .logo *,
+      .main-pic * {
+        display: none;
+      }
+
+      header {
+        display: flex;
+        width: calc(100vw - 3rem);
+        justify-content: space-around;
+        align-content: center;
+        padding: 0;
+        margin: auto;
+        max-width: 1200px;
+        height: 35vmin;
+      }
+
+      header a {
+        height: 35vmin;
+        width: 44%;
+        background-size: contain;
+        background: no-repeat center;
+        filter: drop-shadow(0 0 1px #369);
+        clip-path: circle(50% at center);
+        display: block;
+        transform: rotate(var(--rotate, 0deg)) translateY(var(--translateY, 0))
+          translateX(var(--translateX, 0)) scale(var(--scale, 1));
+        /* position: absolute; */
+      }
+
+      .the-pies {
+        background-image: url(./assets/SVG/starburst-1.svg);
+        left: -0;
+        --rotate: -15deg;
+      }
+
+      .track-us-down {
+        background-image: url(./assets/SVG/starburst-2.svg);
+        /* transform: rotate(16deg) translateY(-10%); */
+        --rotate: 16deg;
+        --translateY: -10%;
+        --translateX: -5%;
+      }
+
+      .contact-us {
+        right: -0;
+        background-image: url(./assets/SVG/starburst-3.svg);
+        --rotate: 7deg;
+      }
+
+      header a:hover {
+        filter: drop-shadow(0 0 4px rgb(91, 141, 190));
+        --scale: 1.1;
+        transform: rotate(var(--rotate, 0deg)) translateY(var(--translateY, 0))
+          translateX(var(--translateX, 0)) scale(var(--scale, 1));
+      }
+
+      header a span {
+        position: absolute;
+        display: block;
+        top: 50%;
+        left: 50%;
+        color: #fff;
+        font-size: 6vmin;
+        font-family: "Pacifico", cursive;
+        text-align: center;
+        width: 70%;
+        transform: translateX(-50%) translateY(-50%);
+        filter: drop-shadow(1px 2px 0 #6cc) drop-shadow(-1px -3px 0 #369);
+        letter-spacing: 0.05rem;
+        line-height: 1.1;
+      }
+
+      .the-pies span {
+        transform: translateX(-45%) translateY(-90%) rotate(-16deg);
+      }
+
+      .track-us-down span {
+        transform: translateX(-45%) translateY(-49%) rotate(-24deg);
+      }
+
+      .contact-us span {
+        transform: translateX(-56%) translateY(-76%) rotate(14deg);
+      }
+
+      .main-pic {
+        background: url(./assets/cone-pie-01-long-bg.jpg) no-repeat center 7%;
+        background-size: cover;
+        height: 40vmin;
+        width: calc(100vw - 3rem);
+        margin: 1rem auto 0;
+        max-height: 500px;
+        min-height: 250px;
+      }
+
+      .main-content {
+        width: 80vw;
+        max-width: 800px;
+        text-align: center;
+        margin: auto;
+      }
+
+      .main-content h1 {
+        font-family: "Pacifico", cursive;
+        font-size: 4.5rem;
+        color: #0080c7;
+        color: rgb(189, 33, 48, 1);
+        line-height: 4rem;
+        text-shadow: 3px 3px 3px rgba(189, 33, 48, 0.35);
+      }
+
+      .main-content p {
+        font-family: "Tajawal", sans-serif;
+        font-size: calc(15px + 1vmin);
+        color: #000;
+        font-weight: 500;
+      }
+
+      .birdie-type {
+        font-family: "Pacifico", cursive;
+        font-weight: 900;
+        color: rgba(0, 128, 199, 1);
+        font-size: 1.45rem;
+        text-shadow: 3px 3px 0px rgba(0, 128, 199, 0.15);
+        margin: 0.3rem;
+      }
+
+      .footer {
+        background-color: #ffe600;
+        height: 1rem;
+        width: 100vw;
+        position: fixed;
+        bottom: 0;
+      }
+
+      @media only screen and (min-width: 470px) and (min-height: 470px) {
+        .cloudline {
+          height: 5rem;
+        }
+
+        header a {
+          clip-path: circle(56% at center);
+        }
+
+        header a span {
+          filter: drop-shadow(2px 3px 0 #6cc) drop-shadow(-2px -4px 0 #369);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cloudline"></div>
+    <div class="logo">
+      <h1 aria-hidden="true">Birdie's Cone Pies</h1>
+      <h2 aria-hidden="true">Peckin' Delicious</h2>
+    </div>
+
+    <header>
+      <a href="#" class="the-pies"> <span>The Pies</span></a>
+      <a href="#" class="track-us-down"> <span>Track Us Down</span></a>
+      <a href="#" class="contact-us"> <span>Contact Us</span></a>
+    </header>
+
+    <main>
+      <div class="main-content">
+        <h1>Coming soon to Utah!</h1>
+        <p>
+          <span class="birdie-type">Birdie’s Cone Pies</span> are “grandma’s”
+          delicious pie crusts in a cone shape ready to eat on the go.
+        </p>
+
+        <p>
+          Our pies can be filled with our signature cheesecake, sweet or tangy
+          cream and your choice of fruits, chocolate, caramel, peanut butter...
+          and so much more. Create your own combination.
+        </p>
+        <p>
+          Also look for our fresh fruit and savory pies on our “birds of the
+          week” menu. Homemade apple pies, peach cobbler, chicken pot pies...
+          you get the idea. Lots to love.
+        </p>
+        <p><strong>Coming Summer 2019!</strong></p>
+      </div>
+      <div class="main-pic">
+        <h2 aria-hidden="true">
+          Hand holding a raspberry cone pie with whipped cream.
+        </h2>
+      </div>
+    </main>
+    <div class="footer"></div>
+  </body>
+</html>
