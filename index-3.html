@@ -67,7 +67,7 @@
         width: 44%;
         background-size: contain;
         background: no-repeat center;
-        filter: drop-shadow(0 0 1px #369);
+        filter: opacity(.6) drop-shadow(0 0 1px #369) saturate(.7);
         clip-path: circle(50% at center);
         display: block;
         transform: rotate(var(--rotate, 0deg)) translateY(var(--translateY, 0))
@@ -96,7 +96,7 @@
       }
 
       header a:hover {
-        filter: drop-shadow(0 0 4px rgb(91, 141, 190));
+        filter: drop-shadow(0 0 4px rgb(91, 141, 190)) saturate(1);
         --scale: 1.1;
         transform: rotate(var(--rotate, 0deg)) translateY(var(--translateY, 0))
           translateX(var(--translateX, 0)) scale(var(--scale, 1));
@@ -113,9 +113,14 @@
         text-align: center;
         width: 70%;
         transform: translateX(-50%) translateY(-50%);
-        filter: drop-shadow(1px 2px 0 #6cc) drop-shadow(-1px -3px 0 #369);
+        filter: drop-shadow(1px 2px 0 #6cc) drop-shadow(-1px -3px 0 #369) opacity(1) saturate(1);
         letter-spacing: 0.05rem;
         line-height: 1.1;
+      }
+
+      header a span:active,
+      header a span.active {
+        color: #058;
       }
 
       .the-pies span {
@@ -172,6 +177,17 @@
         margin: 0.3rem;
       }
 
+      .left-side-pic {
+        float: left;
+        width: 50vw;
+        position: relative;
+        left: 1rem;
+        bottom: 1rem;
+        margin: 1rem 2rem 1rem -31vw;
+        transform: rotate(19deg);
+        z-index: -9;
+      }
+
       .footer {
         background-color: #ffe600;
         height: 1rem;
@@ -210,7 +226,12 @@
 
     <main>
       <div class="main-content">
-        <h1>Coming soon to Utah!</h1>
+        <!-- <h1>Coming soon to Utah!</h1> -->
+        <img
+          src="./assets/hand-holding-raspberry-pie.png"
+          alt="hand holding raspberry cone pie"
+          class="left-side-pic"
+        />
         <p>
           <span class="birdie-type">Birdie’s Cone Pies</span> are “grandma’s”
           delicious pie crusts in a cone shape ready to eat on the go.
@@ -228,12 +249,23 @@
         </p>
         <p><strong>Coming Summer 2019!</strong></p>
       </div>
-      <div class="main-pic">
+      <!-- <div class="main-pic">
         <h2 aria-hidden="true">
           Hand holding a raspberry cone pie with whipped cream.
         </h2>
-      </div>
+      </div> -->
     </main>
     <div class="footer"></div>
+
+    <script>
+      let navStars = document.querySelectorAll("header a"),
+        navStarSpans = document.querySelectorAll("header a span");
+      navStarSpans.forEach(span => {
+        span.addEventListener("click", e => {
+          navStarSpans.forEach(thisSpan => thisSpan.classList.remove("active"));
+          span.classList.add("active");
+        });
+      });
+    </script>
   </body>
 </html>
