@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 170">
+    <defs>
+        <style>.cls-1{fill:#bc3c49;}.cls-2{fill:#ffeb2e;}.cls-3{fill:#238cc5;}.cls-4{font-size:32.18px;fill:#66b3dc;}.cls-12,.cls-4,.cls-8{font-family:Pacifico-Regular, Pacifico;}.cls-8{font-size:36.65px;fill:#1a6994;}.cls-12{font-size:32.18px;fill:#fff;}</style>
+    </defs>
+    <title>Asset 4</title>
+    <g id="Layer_2" data-name="Layer 2">
+        <g id="Layer_1-2" data-name="Layer 1">
+            <polygon class="cls-1" points="0 71 84 78 72 0 132 59 220 32 156 97 179 154 119 133 74 170 79 123 0 71"/>
+            <polygon class="cls-2" points="23 77 92 81 83 22 129 68 197 47 147 97 166 141 119 125 85 153 88 117 23 77"/>
+            <polygon class="cls-3" points="41 83 98 84 91 40 126 75 178 59 140 97 154 130 119 118 93 140 95 112 41 83"/>
+            <text class="cls-4" transform="matrix(0.94, -0.35, 0.35, 0.94, 58.18, 107.3)">
+                <!-- <tspan class="cls-5">Contact</tspan>
+                <tspan x="32" y="35">Us</tspan> -->
+                <!-- <tspan class="cls-5">Contact Us</tspan> -->
+                <!-- <tspan x="32" y="35">Us</tspan> -->
+            </text>
+            <text id="Contact_Us" data-name="Contact Us" class="cls-8" transform="matrix(0.83, -0.28, 0.31, 0.95, 56.76, 103.42)">
+                <!-- <tspan class="cls-9">Contact</tspan>
+                <tspan x="36" y="40">Us</tspan> -->
+            </text>
+            <g id="Contact_Us-2" data-name="Contact Us">
+                <text class="cls-12" transform="matrix(0.95, -0.32, 0.32, 0.95, 56.58, 102.98)">
+                    <!-- <tspan class="cls-13">Contact</tspan>
+                    <tspan x="32" y="35">Us</tspan> -->
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

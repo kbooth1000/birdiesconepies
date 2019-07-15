@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.4c2e32ac.chunk.css",
+    "main.js": "/static/js/main.14e7fddd.chunk.js",
+    "main.js.map": "/static/js/main.14e7fddd.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+    "static/js/2.8ed0239d.chunk.js": "/static/js/2.8ed0239d.chunk.js",
+    "static/js/2.8ed0239d.chunk.js.map": "/static/js/2.8ed0239d.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.7de54576bc560ce9474e88b206ec866d.js": "/precache-manifest.7de54576bc560ce9474e88b206ec866d.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.4c2e32ac.chunk.css.map": "/static/css/main.4c2e32ac.chunk.css.map",
+    "static/media/App.css": "/static/media/starburst-3.ef08dd80.svg",
+    "static/media/hand-holding-raspberry-pie.png": "/static/media/hand-holding-raspberry-pie.07379462.png",
+    "static/media/strawberry-cone-pie.png": "/static/media/strawberry-cone-pie.63d6c8f9.png"
+  }
+}
