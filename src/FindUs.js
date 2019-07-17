@@ -1,5 +1,6 @@
 import React from "react";
 
+import './assets/trailer-silo.png';
 import "./findUs.css";
 
 export default function FindUs() {
