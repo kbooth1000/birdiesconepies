@@ -16,7 +16,7 @@ export default function FindUs() {
           </section>
           <section className="row">
             <div className="bullet-truck" />
-            <div className="location">LHM Riverdale Chrisler Jeep Dodge</div>
+            <div className="location">Larry H Miller Riverdale Chrysler Jeep Dodge</div>
             <div className="time">Saturday, July 20</div>
           </section>
           <section className="row">
