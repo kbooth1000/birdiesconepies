@@ -5,31 +5,26 @@
 * {
   box-sizing: border-box;
 }
+
 .schedule-wrapper {
-  max-width: 940px;
-  margin: 0 auto;
-  counter-reset: info-row;
-}
-.schedule-wrapper > div,
-.row > div {
-  background-color: #fff;
-  padding: 1rem;
-  color: #d9480f;
-}
-.schedule-wrapper {
-  display: block;
-  margin: 0 auto;
-  width: calc(100% - 4rem);
-  min-width: 200px;
-  max-width: 1200px;
+    counter-reset: info-row;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    min-width: 200px;
+    max-width: 1200px;
 }
 
 .row {
   display: flex;
+  border-bottom: 6px dotted #0080c5;
 }
 
+.row:first-child {
+    border: 0 none;
+  }
+
 .row > div {
-  border: 6px dotted #0080c5;
   margin: 1rem 0.5rem;
   padding: 0.5rem;
   line-height: 1.5rem;
@@ -44,20 +39,20 @@
 
 .row:first-child > div {
   font-weight: 900;
+  font-size: calc(1.2rem + 0.5vmin);
   border: 0 none;
-  margin-bottom: 0;
+  margin: 0 0.5rem;
 }
+
 .row:first-child > div:first-child {
     background: none;
     border: 0 none;
-  }
+}
 
 .row > div:first-child {
-  background: url(./assets/trailer-silo.png) no-repeat;
-  background-size: contain;
-  background-position: right;
-  border: 0 none;
+  display: none;
 }
+
 .bullet-truck {
   flex-grow: 0.5;
 }
@@ -66,4 +61,25 @@
 }
 .time {
   flex-grow: 2;
+}
+
+
+@media only screen and (min-width: 400px) {
+    
+
+    .row > div:first-child {
+        background: url(/static/media/trailer-silo.ce14a2ef.png) no-repeat;
+        background-size: contain;
+        background-position: right;
+        border: 0 none;
+        min-width: 45px;
+        display: block;
+    }
+}
+
+
+@media only screen and (min-width: 500px) {
+    .schedule-wrapper {
+        width: calc(100% - 4rem);
+    }
 }
