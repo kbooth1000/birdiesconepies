@@ -1,78 +1,74 @@
-
-
 .menu h1 {
-    font-family: "Pacifico", cursive;
-    font-size: 3.5rem;
-    text-align: center;
-    color: #0080c7;
-    color: rgb(189, 33, 48, 1);
-    line-height: 4rem;
-    text-shadow: 3px 3px 3px rgba(189, 33, 48, 0.35);
+  font-family: "Pacifico", cursive;
+  font-size: 3.5rem;
+  text-align: center;
+  color: #0080c7;
+  color: rgb(189, 33, 48, 1);
+  line-height: 4rem;
+  text-shadow: 3px 3px 3px rgba(189, 33, 48, 0.35);
 }
 
 .menu-row {
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  justify-content: center;
 }
 
 .menu-item {
-    position: relative;
-    padding: 0 1.5rem 2.5rem;
-    text-align: left;
-    overflow: hidden;
-    transition: opacity 1.25s ease;
-    flex: 0 0 25%;
-    justify-content: center;
-    font-family: "Tajawal", sans-serif;
-    min-width: 270px;
+  position: relative;
+  padding: 0 1.5rem 2.5rem;
+  text-align: left;
+  overflow: hidden;
+  transition: opacity 1.25s ease;
+  flex: 0 0 25%;
+  justify-content: center;
+  font-family: "Tajawal", sans-serif;
+  min-width: 270px;
 }
 
 .menu-item-box {
-    border: 11px dotted #0080C5;
-    min-width: 200px;
-    padding: .5rem;
+  border: 11px dotted #0080c5;
+  min-width: 200px;
+  padding: 0.5rem;
 }
 
 .menu-img {
-    width: 20%;
-    float: left;
-    padding: 1rem;
+  width: 20%;
+  float: left;
+  padding: 1rem;
 }
 
 .menu-item h3 {
-    color: #BC3C49;
-    font-size: calc(1rem + 1vmin);
-    margin-bottom: 0;
-    padding-bottom: 0;
-    font-weight: 900;
+  color: #bc3c49;
+  font-size: calc(1rem + 1vmin);
+  margin-bottom: 0;
+  padding-bottom: 0;
+  font-weight: 900;
 }
 
 .menu-item p {
-    padding-bottom: 1rem;
-    font-size: calc(0.7rem + 1vmin);
+  padding-bottom: 1rem;
+  font-size: calc(0.7rem + 1vmin);
 }
 
 @media only screen and (min-width: 408px) {
-    .menu-item {
-        padding: 0 1.5rem 2.5rem;
-    }
-    .menu-item-box {
-        border: 11px dotted #0080C5;
-        min-width: 170px;
-    }
+  .menu-item {
+    padding: 0 1.5rem 2.5rem;
+  }
+  .menu-item-box {
+    border: 11px dotted #0080c5;
+    min-width: 170px;
+  }
 }
 
 @media only screen and (min-width: 500px) {
-    .menu-item {
-        padding: 0 2.5rem 2rem;
-    }
-}
-
-@media only screen and (min-width: 500px) {
-    .menu-item {
-        min-width: 250px;
-    }
+  .menu-item {
+    padding: 0 2.5rem 2rem;
+    min-width: 350px;
+  }
+  .menu-item-box {
+    min-width: 300px;
+  }
 }
