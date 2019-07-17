@@ -1,3 +1,69 @@
 .find-us .schedule {
-    display: grid;
+  display: grid;
+}
+
+* {
+  box-sizing: border-box;
+}
+.schedule-wrapper {
+  max-width: 940px;
+  margin: 0 auto;
+  counter-reset: info-row;
+}
+.schedule-wrapper > div,
+.row > div {
+  background-color: #fff;
+  padding: 1rem;
+  color: #d9480f;
+}
+.schedule-wrapper {
+  display: block;
+  margin: 0 auto;
+  width: calc(100% - 4rem);
+  min-width: 200px;
+  max-width: 1200px;
+}
+
+.row {
+  display: flex;
+}
+
+.row > div {
+  border: 6px dotted #0080c5;
+  margin: 1rem 0.5rem;
+  padding: 0.5rem;
+  line-height: 1.5rem;
+  min-height: 3rem;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  font-family: "Tajawal", sans-serif;
+  font-size: calc(1rem + 0.5vmin);
+}
+
+.row:first-child > div {
+  font-weight: 900;
+  border: 0 none;
+  margin-bottom: 0;
+}
+.row:first-child > div:first-child {
+    background: none;
+    border: 0 none;
+  }
+
+.row > div:first-child {
+  background: url(./assets/trailer-silo.png) no-repeat;
+  background-size: contain;
+  background-position: right;
+  border: 0 none;
+}
+.bullet-truck {
+  flex-grow: 0.5;
+}
+.location {
+  flex-grow: 3;
+}
+.time {
+  flex-grow: 2;
 }

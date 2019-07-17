@@ -8,7 +8,7 @@ const Nav = props => {
         <span>The Pies</span>
       </NavLink>
       <NavLink to="/find-us" activeClassName="active" className="track-us-down">
-        <span>Track Us Down</span>
+        <span>Find Our Truck</span>
       </NavLink>
       <NavLink to='/contact' activeClassName="active" className="contact-us">
         <span>Contact Us</span>
