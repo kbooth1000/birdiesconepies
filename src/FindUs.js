@@ -16,24 +16,15 @@ export default function FindUs() {
           </section>
           <section className="row">
             <div className="bullet-truck" />
-            <div className="location">25th Street and Washington Blvd</div>
-            <div className="time">Friday, July 19, 2019</div>
+            <div className="location">LHM Riverdale Chrisler Jeep Dodge</div>
+            <div className="time">Saturday, July 20</div>
           </section>
           <section className="row">
             <div className="bullet-truck" />
-            <div className="location">25th Street and Washington Blvd</div>
-            <div className="time">Friday, July 19, 2019</div>
+            <div className="location">Henry Barker Jr Park in Pleasant View</div>
+            <div className="time">Monday, July 29</div>
           </section>
-          <section className="row">
-            <div className="bullet-truck" />
-            <div className="location">25th Street and Washington Blvd</div>
-            <div className="time">Friday, July 19, 2019</div>
-          </section>
-          <section className="row">
-            <div className="bullet-truck" />
-            <div className="location">25th Street and Washington Blvd</div>
-            <div className="time">Friday, July 19, 2019</div>
-          </section>
+          
         </div>
       </div>
       <h3 />
