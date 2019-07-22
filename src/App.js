@@ -8,6 +8,7 @@ import Footer from "./Footer";
 import Menu from "./Menu";
 import FindUs from "./FindUs";
 import Contact from "./Contact";
+import Map from "./Map";
 import TempHomeContent from "./TempHomeContent";
 
 import "./App.css";
@@ -42,6 +43,8 @@ class App extends Component {
             <Route path="/menu" exact component={Menu} />
             <Route path="/find-us" exact component={FindUs} />
             <Route path="/contact" exact component={Contact} />
+            <Route path="/map" exact component={Map} />
+
           </main>
 
           <Footer />
