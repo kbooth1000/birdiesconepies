@@ -1,0 +1,34 @@
+.navbar {
+    background: var(--birdie-blue);
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 3rem 1rem;
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+}
+
+nav a span {
+    font-family: var(--font-sans);
+    font-size: 1.2rem;
+    font-weight: 900;
+}
+
+canvas {
+    max-width: calc(100vw - 2rem);
+}
+
+.nav-border-top {
+    transform: rotate(180deg);
+}
+
+.nav-border-bottom {
+    margin-bottom: -4px;
+}

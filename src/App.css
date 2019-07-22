@@ -1,8 +1,20 @@
+:root {
+  --birdie-blue: #0081c5;
+  --birdie-yellow: #ffe600;
+  --birdie-red: #bd2130;
+  --font-sans: "Tajawal", sans-serif;
+  --font-script: "Pacifico", cursive;
+}
+
+.App {
+  overflow-x: hidden;
+}
+
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  border: #ffe600 solid 1rem;
+  border: var(--birdie-yellow) solid 1rem;
   border-top-width: 6rem;
   border-bottom: 0 none;
   min-height: 100vh;
@@ -14,23 +26,24 @@ body {
 }
 
 h2 {
-  font-family: "Pacifico", cursive;
+  font-family: var(--font-script);
   font-size: 3.5rem;
   text-align: center;
-  color: #0080c7;
-  color: rgb(189, 33, 48, 1);
+  color: var(--birdie-blue);
+  color: var(--birdie-red);
   line-height: 4rem;
   text-shadow: 3px 3px 3px rgba(189, 33, 48, 0.35);
 }
 
 main {
   max-width: 1200px;
-  margin: auto;
+  margin: 8rem auto 0;
   padding: 0 2rem;
 }
 
 header {
   height: 36vmin;
+  margin-bottom: 3rem;
 }
 
 .logo,
@@ -60,93 +73,7 @@ header {
   display: none;
 }
 
-nav {
-  display: flex;
-  width: calc(100vw - 2rem);
-  justify-content: space-around;
-  align-content: center;
-  padding: 0;
-  margin: auto;
-  max-width: 1520px;
-  height: 37vmin;
-}
 
-nav a {
-  height: 35vmin;
-  width: 44%;
-  background-size: contain;
-  background: no-repeat center;
-  filter: opacity(0.99) drop-shadow(0 0 1px #369) saturate(0.75);
-  clip-path: circle(50% at center);
-  display: block;
-  transform: rotate(var(--rotate, 0deg)) translateY(var(--translateY, 0))
-    translateX(var(--translateX, 0)) scale(var(--scale, 1));
-  /* position: absolute; */
-}
-
-.the-pies {
-  background-image: url(./assets/SVG/starburst-1.svg);
-  left: 0;
-  --rotate: -15deg;
-}
-
-.track-us-down {
-  background-image: url(./assets/SVG/starburst-2.svg);
-  /* transform: rotate(16deg) translateY(-10%); */
-  --rotate: 16deg;
-  --translateY: -26%;
-  --translateX: -7%;
-}
-
-.contact-us {
-  right: -0;
-  background-image: url(./assets/SVG/starburst-3.svg);
-  --rotate: 7deg;
-}
-
-nav a:hover,
-nav a.active {
-  filter: drop-shadow(0 0 4px rgb(91, 141, 190)) saturate(1);
-  --scale: 1.1;
-  transform: rotate(var(--rotate, 0deg)) translateY(var(--translateY, 0))
-    translateX(var(--translateX, 0)) scale(var(--scale, 1));
-}
-
-nav a span {
-  position: absolute;
-  display: block;
-  top: 50%;
-  left: 50%;
-  color: #fff;
-  font-size: 6vmin;
-  font-family: "Pacifico", cursive;
-  text-align: center;
-  width: 70%;
-  transform: translateX(-50%) translateY(-50%);
-  filter: drop-shadow(1px 2px 0 #369) drop-shadow(-1px -3px 0 #369) opacity(1)
-    saturate(1);
-  letter-spacing: 0.05rem;
-  line-height: 1.1;
-}
-
-nav a span:active,
-nav a.active span {
-  color: #058;
-  filter: drop-shadow(2px 2px 0 #fff) drop-shadow(-2px -2px 0 #fff)
-    drop-shadow(1px 2px 0 #6cc) drop-shadow(-1px -3px 0 #369);
-}
-
-.the-pies span {
-  transform: translateX(-45%) translateY(-90%) rotate(-16deg);
-}
-
-.track-us-down span {
-  transform: translateX(-45%) translateY(-49%) rotate(-24deg);
-}
-
-.contact-us span {
-  transform: translateX(-56%) translateY(-76%) rotate(14deg);
-}
 
 .main-pic {
   background: url(./assets/cone-pie-01-long-bg.jpg) no-repeat center 7%;
@@ -168,14 +95,14 @@ nav a.active span {
 .main-content h1 {
   font-family: "Pacifico", cursive;
   font-size: 4.5rem;
-  color: #0080c7;
+  color: var(--birdie-blue);
   color: rgb(189, 33, 48, 1);
   line-height: 4rem;
   text-shadow: 3px 3px 3px rgba(189, 33, 48, 0.35);
 }
 
 .main-content p {
-  font-family: "Tajawal", sans-serif;
+  font-family: var(--font-sans);
   font-size: calc(15px + 1vmin);
   color: #000;
   font-weight: 500;
@@ -184,7 +111,7 @@ nav a.active span {
 .birdie-type {
   font-family: "Pacifico", cursive;
   font-weight: 900;
-  color: rgba(0, 128, 199, 1);
+  color: var(--birdie-blue);
   font-size: 1.45rem;
   text-shadow: 3px 3px 0px rgba(0, 128, 199, 0.15);
   margin: 0.3rem;
@@ -223,10 +150,11 @@ nav a.active span {
 
 .footer {
   background-color: #ffe600;
-  height: 1rem;
+  height: 1.2rem;
   width: 100vw;
   position: fixed;
   bottom: 0;
+  margin-left: -1rem;
 }
 
 @media only screen and (min-width: 470px) and (min-height: 470px) {
@@ -234,17 +162,6 @@ nav a.active span {
     height: 5rem;
   }
 
-  nav {
-    transform: scale(0.95);
-  }
-
-  nav a {
-    clip-path: circle(56% at center);
-  }
-
-  nav a span {
-    filter: drop-shadow(2px 3px 0 #6cc) drop-shadow(-2px -4px 0 #369);
-  }
 
   .left-side-pic {
     margin-left: -38vw;

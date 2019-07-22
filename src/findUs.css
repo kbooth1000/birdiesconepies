@@ -1,3 +1,7 @@
+.find-us h2 {
+    font-size: 3rem;
+} 
+
 .find-us .schedule {
   display: grid;
 }
@@ -13,6 +17,7 @@
     width: 100%;
     min-width: 200px;
     max-width: 1200px;
+    text-align: center;
 }
 
 .row {
@@ -58,6 +63,15 @@
 }
 .location {
   flex-grow: 3;
+  flex-direction: column;
+}
+.location a {
+    font-size: .8rem;
+    text-transform: uppercase;
+    display: block;
+    text-decoration: none;
+    border: 1px solid #ccc;
+    padding: 0 0.4rem;
 }
 .time {
   flex-grow: 2;
