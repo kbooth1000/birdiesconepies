@@ -1,34 +1,130 @@
 .navbar {
     background: var(--birdie-blue);
+    height: auto;
+    overflow: hidden;
+    transition: 600ms;
+}
+.navbar img {
+    width: 2rem;
+    align-self: center;
+    justify-content: flex-start;
+    transition: 500ms;
+    margin-left: 2rem;
+    transform-origin: bottom;
 }
 
 nav {
     display: flex;
-    justify-content: space-around;
-    padding: 3rem 1rem;
+    justify-content: flex-start;
+    padding: 0;
+    max-width: 1200px;
+    margin: 0 auto auto auto;
+    flex-direction: column;
+    height: 0;
+    transition: 1500ms;
+}
+nav::before {
+    content: none; /* url(./assets/SVG/drop-down-arrow.svg); */
+    color: #fff;
+    align-self: center;
+    width: 4rem;
 }
 
 nav a {
     display: block;
     text-decoration: none;
+    text-transform: uppercase;
     color: #fff;
     text-align: center;
+    margin: 0 1rem;
+}
+
+nav a:hover {
+    background: var(--birdie-lightblue);
+}
+
+nav a:first-child {
+    margin-top: 2rem;
 }
 
 nav a span {
     font-family: var(--font-sans);
-    font-size: 1.2rem;
+    font-size: .9rem;
     font-weight: 900;
 }
 
 canvas {
-    max-width: calc(100vw - 2rem);
+    max-width: calc(100vw - 1rem);
 }
 
 .nav-border-top {
     transform: rotate(180deg);
+    margin-top: -2px; /*  ensures top border extends outside of nav container  */
+    margin-left: -1px; /*  covers strange start of sinus curve (with overflow: hidden on main container)  */
 }
 
 .nav-border-bottom {
-    margin-bottom: -4px;
+    margin-bottom: -4px; /*  ensures bottom border extends outside of nav container  */
+}
+
+.navbar.active {
+    height: auto;
+}
+.navbar.active img {
+   transform: rotate(-90deg);
+   margin-bottom: -.5rem;
+}
+.navbar.active nav {
+    justify-content: space-around;
+    height: 10rem;
+    padding: 0 1rem;
+    margin: -1rem auto auto auto;
+}
+.navbar.active nav a:first-child {
+    margin-top: 0;
+}
+
+@media only screen and (max-width: 573px) {
+    .navbar.active nav a:first-child {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+@media only screen and (min-width: 573px) {
+    .navbar, .navbar.active {
+        height: auto;
+    }
+    .navbar img, .navbar.active img {
+       display: none;
+    }
+    nav, .navbar.active nav {
+        flex-direction: row;
+        justify-content: space-around;
+        height: auto;
+        padding: 3rem 1rem;
+        margin: auto;
+    }
+    nav::before, .navbar.active nav::before {
+        content: none;
+        display: none;
+    }
+    nav a, .navbar.active nav a {
+        display: block;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #fff;
+        text-align: center;
+        margin: 0 1rem;
+    }
+    nav a:first-child {
+        margin-top: 0;
+    }
+    nav a span, .navbar.active nav a span {
+        font-size: 1rem;
+    }
+}
+@media only screen and (min-width: 640px) {
+    nav a span, .navbar.active nav a span {
+        font-size: 1.2rem;
+    }
 }
