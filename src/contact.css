@@ -1,0 +1,22 @@
+.contact {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+.contact ul {
+    list-style: none;
+}
+
+.contact li {
+    line-height: 1.75;
+}
+
+.contact a {
+    text-decoration: none;
+    color: var(--birdie-blue);
+    font-weight: 600;
+    
+}

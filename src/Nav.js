@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, withRouter } from "react-router-dom";
 
+import dropDownArrow from "./assets/SVG/drop-down-arrow.svg";
 import "./nav.css";
 
 class Nav extends Component {
@@ -8,7 +9,7 @@ class Nav extends Component {
     super();
     this.state = {
       canvasWidth: 0,
-      canvasHeight: 30
+      navbarIsActive: false
     };
   }
 
@@ -32,7 +33,6 @@ class Nav extends Component {
     ctx.lineTo(canvasWidth, height);
     ctx.lineTo(0, height);
     ctx.lineTo(0, height / 2);
-
     ctx.fill();
   };
 
@@ -41,8 +41,6 @@ class Nav extends Component {
       window.innerWidth ||
       document.documentElement.clientWidth ||
       document.getElementsByTagName("body")[0].clientWidth;
-    console.log("::", docWidth1);
-
     this.setState({
       canvasWidth: docWidth1
     });
@@ -50,10 +48,8 @@ class Nav extends Component {
   };
 
   componentDidMount() {
+    console.log('nav route');
     let borderCanvases = document.querySelectorAll("canvas.wavy-border");
-    let cvs1 = borderCanvases[0],
-      cvs2 = borderCanvases[1];
-
     borderCanvases.forEach(cvsEl => {
       let ctx = cvsEl.getContext("2d");
       let docWidth =
@@ -61,53 +57,78 @@ class Nav extends Component {
         document.documentElement.clientWidth ||
         document.getElementsByTagName("body")[0].clientWidth;
       if (this.state.canvasWidth !== docWidth) {
-        console.log("docwidth", docWidth);
         // this.makeCurvyBorder(cvsEl, ctx);
         this.setState({ canvasWidth: docWidth });
-        this.updateCurvyBorder(cvsEl, ctx);
+      this.updateCurvyBorder(cvsEl, ctx);
       }
 
       window.addEventListener("resize", () =>
         this.updateCurvyBorder(cvsEl, ctx)
       );
+      this.unlisten = this.props.history.listen((location, action) => {
+        console.log(`The current URL is ${location.pathname}${location.search}${location.hash}`)
+        console.log(`The last navigation action was ${action}`)
+        this.updateCurvyBorder(cvsEl, ctx);
+      });
       window.addEventListener("load", () => this.updateCurvyBorder(cvsEl, ctx));
     });
   }
 
   componentWillUnmount() {
-    let cvs1 = document.querySelector("canvas");
-    let ctx = cvs1.getContext("2d");
+    let cvs = document.querySelector("canvas");
+    let ctx = cvs.getContext("2d");
     window.removeEventListener("resize", () =>
-      this.updateCurvyBorder(cvs1, ctx)
+      this.updateCurvyBorder(cvs, ctx)
     );
+    window.removeEventListener("load", () =>
+      this.updateCurvyBorder(cvs, ctx)
+    );
+    this.setState({
+      canvasWidth: 0
+    })
+    this.unlisten();
   }
 
+  makeNavbarActive = () => {
+    this.setState({
+      navbarIsActive: !this.state.navbarIsActive
+    });
+  };
   render() {
     return (
-      <div className="navbar">
-        <canvas id="navBorderTop" class="wavy-border nav-border-top">
+      <div className={`navbar ${this.state.navbarIsActive ? "active" : ""}`}
+      
+      >
+        <canvas id="navBorderTop" className="wavy-border nav-border-top">
           ~~~~~~
         </canvas>
+        <img src={dropDownArrow} alt="Click to expand navigation."
+        onClick={()=>this.makeNavbarActive()} />
         <nav>
-          <NavLink to="/menu" activeClassName="active" className="the-pies">
-            <span>The Pies</span>
+          <NavLink to="/about" activeClassName="active" className="about-us">
+            <span>About Us</span>
           </NavLink>
-          <NavLink
-            to="/find-us"
-            activeClassName="active"
-            className="track-us-down"
-          >
-            <span>Find Our Truck</span>
+
+          <NavLink to="/menu" activeClassName="active" className="menu">
+            <span>Menu</span>
+          </NavLink>
+
+          <NavLink to="/find-us" activeClassName="active" className="find-us">
+            <span>Schedule</span>
+          </NavLink>
+
+          <NavLink to="/catering" activeClassName="active" className="catering">
+            <span>Catering</span>
           </NavLink>
           <NavLink
             to="/contact"
             activeClassName="active"
             className="contact-us"
           >
-            <span>Contact Us</span>
+            <span>Contact</span>
           </NavLink>
         </nav>
-        <canvas id="navBorderBottom" class="wavy-border nav-border-bottom">
+        <canvas id="navBorderBottom" className="wavy-border nav-border-bottom">
           ~~~~~~
         </canvas>
       </div>
@@ -115,4 +136,4 @@ class Nav extends Component {
   }
 }
 
-export default Nav;
+export default withRouter(Nav);

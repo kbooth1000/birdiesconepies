@@ -1,5 +1,6 @@
 :root {
   --birdie-blue: #0081c5;
+  --birdie-lightblue: #0092e0;
   --birdie-yellow: #ffe600;
   --birdie-red: #bd2130;
   --font-sans: "Tajawal", sans-serif;
@@ -23,6 +24,19 @@ body {
 
 .page {
   margin-top: -5rem;
+  transition: 650ms;
+  width: 0;
+  margin-left: -100vw;
+  overflow: visible;
+}
+
+.page.current {
+  width: 100%;
+  margin-left: 0;
+}
+
+.page.not-current {
+  width: 0;
 }
 
 h2 {
@@ -37,7 +51,7 @@ h2 {
 
 main {
   max-width: 1200px;
-  margin: 8rem auto 0;
+  margin: 8rem auto 4rem;
   padding: 0 2rem;
 }
 
