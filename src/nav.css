@@ -64,7 +64,7 @@ canvas {
 }
 
 .nav-border-bottom {
-    margin-bottom: -4px; /*  ensures bottom border extends outside of nav container  */
+    margin-bottom: -5px; /*  ensures bottom border extends outside of nav container  */
 }
 
 .navbar.active {

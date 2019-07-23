@@ -51,9 +51,6 @@ export default class About extends Component {
             flavored cream, delicious mix-ins, sprinkled pie crust, and topped
             with a "birdie." Lots to love.
           </p>
-          <p>
-            <strong>Coming Summer 2019!</strong>
-          </p>
         </div>
         <div style={{ clear: "both", height: "4rem" }} />
       </div>
