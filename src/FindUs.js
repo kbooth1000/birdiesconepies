@@ -14,6 +14,12 @@ export default class FindUs extends Component {
 
   events = [
     {
+      date: "When:",
+      time: "",
+      location: "Where:",
+      name: "Event:"
+    },
+    {
       date: "July 29th",
       time: "5-9 pm",
       location: "320 West Elberta Drive",
@@ -66,12 +72,7 @@ export default class FindUs extends Component {
         <h2>Where we'll be:</h2>
         <div className="schedule">
           <div className="schedule-wrapper">
-            <section className="row">
-              <div className="bullet-truck" />
-              <div className="location">Event:</div>
-              <div className="location">Where:</div>
-              <div className="time">When:</div>
-            </section>
+           
             {eventRows}
           </div>
         </div>
