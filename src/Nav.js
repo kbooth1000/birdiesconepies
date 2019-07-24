@@ -102,8 +102,8 @@ class Nav extends Component {
         <canvas id="navBorderTop" className="wavy-border nav-border-top">
           ~~~~~~
         </canvas>
-        <img src={dropDownArrow} alt="Click to expand navigation."
-        onClick={()=>this.makeNavbarActive()} />
+
+        <div className="menu-icon" onClick={()=>this.makeNavbarActive()}></div>
         <nav>
           <NavLink to="/about" activeClassName="active" className="about-us">
             <span>About Us</span>
@@ -128,9 +128,9 @@ class Nav extends Component {
             <span>Contact</span>
           </NavLink>
         </nav>
-        <canvas id="navBorderBottom" className="wavy-border nav-border-bottom">
+        {/* <canvas id="navBorderBottom" className="wavy-border nav-border-bottom"> 
           ~~~~~~
-        </canvas>
+        </canvas>*/}
       </div>
     );
   }
