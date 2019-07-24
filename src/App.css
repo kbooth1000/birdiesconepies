@@ -1,7 +1,7 @@
 :root {
   --birdie-blue: #0081c5;
   --birdie-lightblue: #0092e0;
-  --birdie-yellow: #ffe600;
+  --birdie-yellow: hsl(52, 99%, 49%);
   --birdie-red: #bd2130;
   --font-sans: "Tajawal", sans-serif;
   --font-script: "Pacifico", cursive;
@@ -163,7 +163,7 @@ header {
 }
 
 .footer {
-  background-color: #ffe600;
+  background-color: var(--birdie-yellow);
   height: 1.2rem;
   width: 100vw;
   position: fixed;
