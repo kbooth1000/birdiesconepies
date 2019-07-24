@@ -35,12 +35,11 @@
   line-height: 1.5rem;
   min-height: 3rem;
   display: flex;
-  align-content: center;
-  align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   font-family: "Tajawal", sans-serif;
-  font-size: calc(1rem + 0.5vmin);
+  font-size: calc(1rem + .2vw);
   text-align: left;
+  flex: 2;
 }
 
 .row:first-child > div {
@@ -61,15 +60,14 @@
 
 .row > div:first-child {
   display: none;
+  flex: 1;
+  width: 55px;
+  max-width: 55px;
 }
 .row > div:first-child img {
   max-height: 2rem;
 }
 
-
-.bullet-truck {
-  flex-grow: 0.5;
-}
 .location {
   flex-grow: 3;
   flex-direction: column;
@@ -92,8 +90,6 @@
 }
 
 
-
-
 @media only screen and (min-width: 500px) {
     .schedule-wrapper {
         width: calc(100% - 4rem);
@@ -105,7 +101,8 @@
         background-size: contain;
         background-position: right;
         border: 0 none;
-        min-width: 45px;
+        width: 55px;
+        min-width: 55px;
         display: block;
     }
 }
