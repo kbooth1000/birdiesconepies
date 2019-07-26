@@ -103,7 +103,7 @@ header {
   width: 80vw;
   max-width: 800px;
   text-align: center;
-  margin: auto;
+  margin: -5rem auto;
 }
 
 .main-content h1 {
@@ -128,7 +128,7 @@ header {
   color: var(--birdie-blue);
   font-size: 1.45rem;
   text-shadow: 3px 3px 0px rgba(0, 128, 199, 0.15);
-  margin: 0.3rem;
+  margin: 0 0.3rem;
 }
 
 .left-side-pic {

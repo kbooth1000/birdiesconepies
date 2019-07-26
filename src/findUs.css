@@ -46,13 +46,13 @@
   font-weight: 900;
   font-size: calc(1.2rem + 0.5vmin);
   border: 0 none;
-  margin: 0 0.5rem;
+  margin: 0;
 }
 
 .row:first-child > div:first-child {
     background: none;
     border: 0 none;
-    display: flex;
+    display: none;
     align-items: center;
     align-content: center;
     height: 100%;
@@ -94,6 +94,10 @@
     .schedule-wrapper {
         width: calc(100% - 4rem);
     }
+    .row:first-child > div {
+      margin: 0 1rem 0 0;
+    }
+    
 }
 @media only screen and (min-width: 600px) {
     .row > div:first-child {
@@ -104,5 +108,8 @@
         width: 55px;
         min-width: 55px;
         display: block;
+    }
+    .row:first-child > div:first-child {
+      display: flex;
     }
 }
