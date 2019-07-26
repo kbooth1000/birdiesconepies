@@ -1,0 +1,97 @@
+.main-content {
+  margin-top: -5rem;
+    transition: 650ms;
+    width: 0;
+    margin-left: -100vw;
+    overflow: visible;
+}
+
+.star-link {
+  height: 35vmin;
+  width: 44%;
+  background-size: contain;
+  background: no-repeat center;
+  filter: opacity(0.99) drop-shadow(0 0 1px #369) saturate(0.75);
+  clip-path: circle(50% at center);
+  display: block;
+  transform: rotate(var(--rotate, 0deg)) translateY(var(--translateY, 0))
+    translateX(var(--translateX, 0)) scale(var(--scale, 1));
+}
+
+.star-link.one {
+  background-image: url(./assets/SVG/starburst-1.svg);
+  left: 0;
+  --rotate: -15deg;
+}
+
+.star-link.two {
+  background-image: url(./assets/SVG/starburst-2.svg);
+  /* transform: rotate(16deg) translateY(-10%); */
+  --rotate: 16deg;
+  --translateY: -26%;
+  --translateX: -50%;
+  margin: 10rem auto -5rem 50%;
+}
+
+.star-link.three {
+  right: -0;
+  background-image: url(./assets/SVG/starburst-3.svg);
+  --rotate: 7deg;
+}
+
+.star-link:hover,
+.star-link.active {
+  filter: drop-shadow(0 0 4px rgb(91, 141, 190)) saturate(1);
+  --scale: 1.1;
+  transform: rotate(var(--rotate, 0deg)) translateY(var(--translateY, 0))
+    translateX(var(--translateX, 0)) scale(var(--scale, 1));
+}
+
+.star-link span {
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  color: #fff;
+  font-size: 6vmin;
+  font-family: var(--font-sans);
+  text-align: center;
+  width: 70%;
+  transform: translateX(-50%) translateY(-50%);
+  filter: drop-shadow(1px 2px 0 #369) drop-shadow(1px 2px 2px #369) drop-shadow(-1px -3px 1px #369) opacity(1)
+    saturate(1);
+  letter-spacing: 0.05rem;
+  line-height: 1.1;
+}
+
+.star-link span:active,
+.star-link.active span {
+  color: #058;
+  filter: drop-shadow(2px 2px 0 #fff) drop-shadow(-2px -2px 0 #fff)
+    drop-shadow(1px 2px 0 #6cc) drop-shadow(-1px -3px 0 #369);
+}
+
+.star-link.one span {
+  transform: translateX(-45%) translateY(-90%) rotate(-16deg);
+}
+
+.star-link.two span {
+  transform: translateX(-45%) translateY(-49%) rotate(-24deg);
+}
+
+.star-link.three span {
+  transform: translateX(-56%) translateY(-76%) rotate(14deg);
+}
+
+.home .main-pic {
+  background: url(/static/media/cone-pie-01-long-bg.97e2f68f.jpg) no-repeat center 7%;
+  background-size: cover;
+  height: 40vmin;
+  width: calc(100vw + 15rem);
+  margin: 1rem auto -15rem -30vw;
+  max-height: 500px;
+  min-height: 250px;
+  z-index: -9;
+}
+
+.welcome { margin: 0; }
