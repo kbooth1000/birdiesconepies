@@ -1,16 +1,27 @@
 import React from "react";
+import {Link} from 'react-router-dom';
 
 import raspberryPie from "./assets/hand-holding-raspberry-pie.png";
 
 export default function HomeContent() {
   return (
     <div className="main-content">
-      {/* <!-- <h1>Coming soon to Utah!</h1> --> */}
+    <h2>
+      <span>Welcome to </span> <span> Birdie's Cone Pies</span></h2>
       <img
         src={raspberryPie}
         alt="hand holding raspberry cone pie"
         className="left-side-pic"
       />
+
+      <Link to="/find-us" style={{
+        height: '10rem',
+        width: '10rem',
+        background: 'url(assets/SVG/starburst-1.svg)', border: '1px solid #f00', display: 'inline-block', fontSize: '1.3rem'
+      }}>
+        Find Our Truck!
+      </Link>
+
       <p>
         <span className="birdie-type">Birdie’s Cone Pies</span> are “grandma’s”
         delicious pie crusts in a cone shape ready to eat on the go.

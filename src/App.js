@@ -34,24 +34,24 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <Route path="/" exact component={TempHomeContent} />
         <div className="App">
-          <Route
+          {/* <Route
             render={({ location }) =>
               location.pathname !== "/" && location.pathname !== "/login" ? (
                 <Header />
               ) : null
             }
-          />
-          {/* <Header /> */}
-          <Route
+          /> */}
+          <Header />
+          {/* <Route
             render={({ location }) =>
               location.pathname !== "/" ? <Nav /> : null
             }
-          />
-          {/* <Nav /> */}
+          /> */}
+          <Nav />
 
           <main>
+        <Route path="/" exact component={HomeContent} />
             <Route path="/under-construction" exact component={HomeContent} />
             <Route path="/menu" exact render={ () => <Menu isCurrentPage={()=>this.isCurrentPage('menu')} setPage={page=>this.setPage(page)} /> } />
             <Route path="/about" exact render={ () => <About isCurrentPage={()=>this.isCurrentPage('about')} setPage={page=>this.setPage(page)} /> } />
