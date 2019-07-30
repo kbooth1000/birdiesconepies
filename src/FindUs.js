@@ -20,29 +20,18 @@ export default class FindUs extends Component {
       name: "Event:"
     },
     {
-      date: "July 29th",
-      time: "5-9 pm",
-      location: "320 West Elberta Drive",
-      name: "Pleasant View City Food Truck Giddy Up"
-    },
-    {
-      date: "August 3rd",
-      time: "5-9 pm",
-      location: "1350 highway 89",
-      name: "Harrisville Heritage Days"
-    },
-    {
       date: "August 5th",
       time: "5-9 pm",
       location: "320 West Elberta Drive",
       name: "Pleasant View City Food Truck Giddy Up"
-    },
-    {
-      date: "August 17th",
-      time: "12-8 pm",
-      location: "950 W Riverdale Road",
-      name: "Ken Garff Honda (customer appreciation)"
     }
+    // ,
+    // {
+    //   date: "August 17th",
+    //   time: "12-8 pm",
+    //   location: "950 W Riverdale Road",
+    //   name: "Ken Garff Honda (customer appreciation)"
+    // }
   ];
 
   render() {

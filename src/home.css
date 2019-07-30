@@ -16,6 +16,7 @@
   display: block;
   transform: rotate(var(--rotate, 0deg)) translateY(var(--translateY, 0))
     translateX(var(--translateX, 0)) scale(var(--scale, 1));
+  max-width: 320px;
 }
 
 .star-link.one {
