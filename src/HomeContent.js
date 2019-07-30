@@ -24,7 +24,6 @@ export default function HomeContent() {
         <span className="birdie-type">Birdie’s Cone Pies</span> are “grandma’s”
         delicious pie crusts in a cone shape ready to eat on the go.
       </p>
-
       <p>
         Our pies can be filled with our signature cheesecake, sweet or tangy
         cream and your choice of fruits, chocolate, caramel, peanut butter...
