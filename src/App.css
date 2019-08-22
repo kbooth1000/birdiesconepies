@@ -8,7 +8,7 @@
 }
 
 .App {
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 body {
