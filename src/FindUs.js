@@ -23,7 +23,7 @@ export default class FindUs extends Component {
       date: "Today, October 23rd",
       time: "4-7pm",
       location: "5098 South 1050 West in Riverdale",
-      name: "We will be at Besst Reality Groups Riverdale office for their Grand Opening!"
+      name: "We will be at Besst Realty Groups Riverdale office for their Grand Opening!"
     },
     {
       date: "Saturday, October 26th",
