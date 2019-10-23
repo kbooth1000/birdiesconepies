@@ -6,15 +6,11 @@
   flex-wrap: wrap;
   justify-content: center;
 }
-.row {
-  height: 24%;
-  border: #393 solid 2px;
-  display: flex;
-}
+
 .image {
   width: 30vw;
   height: 30vw; 
-  border: #399 solid 2px;
+  /* border: #399 solid 2px; */
   transition: 1s;
   background-size: cover !important;
 }
