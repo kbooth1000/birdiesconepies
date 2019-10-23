@@ -10,6 +10,7 @@ import Menu from "./Menu";
 import FindUs from "./FindUs";
 import Catering from "./Catering";
 import Contact from "./Contact";
+import Gallery from "./Gallery";
 import Map from "./Map";
 import TempHomeContent from "./TempHomeContent";
 
@@ -24,10 +25,10 @@ class App extends Component {
 
   setPage = pageName => {
     console.log('setPage', pageName, this.state.currentPage);
-    setTimeout(()=>
-    this.setState({
-      currentPage: pageName
-    }), 1 //ensures this happens after page className changes, enables css transition
+    setTimeout(() =>
+      this.setState({
+        currentPage: pageName
+      }), 1 //ensures this happens after page className changes, enables css transition
     )
   }
 
@@ -51,13 +52,14 @@ class App extends Component {
           <Nav />
 
           <main>
-        <Route path="/" exact component={HomeContent} />
+            <Route path="/" exact component={HomeContent} />
             <Route path="/under-construction" exact component={HomeContent} />
-            <Route path="/menu" exact render={ () => <Menu isCurrentPage={()=>this.isCurrentPage('menu')} setPage={page=>this.setPage(page)} /> } />
-            <Route path="/about" exact render={ () => <About isCurrentPage={()=>this.isCurrentPage('about')} setPage={page=>this.setPage(page)} /> } />
-            <Route path="/find-us" exact render={ () => <FindUs isCurrentPage={()=>this.isCurrentPage('schedule')} setPage={page=>this.setPage(page)} /> } />
-            <Route path="/catering" exact render={ () => <Catering isCurrentPage={()=>this.isCurrentPage('catering')} setPage={page=>this.setPage(page)} /> } />
-            <Route path="/contact" exact render={ () => <Contact isCurrentPage={()=>this.isCurrentPage('contact')} setPage={page=>this.setPage(page)} /> } />
+            <Route path="/menu" exact render={() => <Menu isCurrentPage={() => this.isCurrentPage('menu')} setPage={page => this.setPage(page)} />} />
+            <Route path="/about" exact render={() => <About isCurrentPage={() => this.isCurrentPage('about')} setPage={page => this.setPage(page)} />} />
+            <Route path="/find-us" exact render={() => <FindUs isCurrentPage={() => this.isCurrentPage('schedule')} setPage={page => this.setPage(page)} />} />
+            <Route path="/catering" exact render={() => <Catering isCurrentPage={() => this.isCurrentPage('catering')} setPage={page => this.setPage(page)} />} />
+            <Route path="/contact" exact render={() => <Contact isCurrentPage={() => this.isCurrentPage('contact')} setPage={page => this.setPage(page)} />} />
+            <Route path="/gallery" exact render={() => <Gallery isCurrentPage={() => this.isCurrentPage('contact')} setPage={page => this.setPage(page)} />} />
             <Route path="/map" exact component={Map} />
 
           </main>

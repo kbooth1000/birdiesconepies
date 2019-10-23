@@ -1,11 +1,38 @@
-import React from 'react';
+import React, { Component } from 'react'
+import './gallery.css';
 
-const Gallery = () => {
-  return (
-    <div className="Gallery">
+export default class Gallery extends Component {
 
-    </div>
-  )
+  constructor() {
+    super();
+    this.state = {
+      expandedImg: null
+    }
+  }
+
+  imageCells = ['1', '2', '3', '4', '5',
+    '6', '7']
+
+  handleImgClick = imgNum => {
+    this.setState({
+      expandedImg: imgNum
+    })
+
+  }
+  render() {
+    return (
+      <div className="Gallery">
+        <div className="container">
+
+          {
+            this.imageCells.map(
+              (img, i) => <figure key={i} className={`image ${this.state.expandedImg === i ? "expanded" : ""}`} onClick={() => { this.handleImgClick(i) }}>{img}</figure>
+            )
+          }
+        </div>
+
+
+      </div>
+    )
+  }
 }
-
-export default Gallery;

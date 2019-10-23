@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.row {
+  height: 24%;
+  border: #393 solid 2px;
+  display: flex;
+}
+.image {
+  width: 30vw;
+  height: 30vw; 
+  border: #399 solid 2px;
+  transition: 1s;
+}
+.image.expanded {
+  width: 78vmin;
+  height: 78vmin;
+  flex-grow: 3;
+}
+.image.contracted {
+  width: 10vw;
+  height: 10vw;
+  flex-grow: 3;
+}
