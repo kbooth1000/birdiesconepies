@@ -8,11 +8,12 @@
 }
 
 .image {
-  width: 30vw;
-  height: 30vw; 
-  /* border: #399 solid 2px; */
+  width: 20vw;
+  height: 20vw;
+  -webkit-transition: 1s;
   transition: 1s;
-  background-size: cover !important;
+  background-size: cover!important;
+  flex-grow: .3;
 }
 .image.expanded {
   width: 78vmin;
