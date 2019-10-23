@@ -16,11 +16,15 @@
   height: 30vw; 
   border: #399 solid 2px;
   transition: 1s;
+  background-size: cover !important;
 }
 .image.expanded {
   width: 78vmin;
   height: 78vmin;
   flex-grow: 3;
+  background-size: contain !important;
+  background-position: center center !important;
+  border: 0 none;
 }
 .image.contracted {
   width: 10vw;

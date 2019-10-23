@@ -22,7 +22,9 @@
 .star-link.one {
   background-image: url(./assets/SVG/starburst-1.svg);
   left: 0;
-  --rotate: -15deg;
+  --rotate: 15deg;
+    --translateX: 136%;
+    --translateY: -81%;
 }
 
 .star-link.two {
@@ -30,7 +32,7 @@
   /* transform: rotate(16deg) translateY(-10%); */
   --rotate: 16deg;
   --translateY: -26%;
-  --translateX: -50%;
+  --translateX: -61%;
   margin: 10rem auto -5rem 50%;
 }
 
