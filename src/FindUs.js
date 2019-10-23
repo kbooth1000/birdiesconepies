@@ -20,10 +20,16 @@ export default class FindUs extends Component {
       name: "Event:"
     },
     {
-      date: "August 5th",
-      time: "5-9 pm",
-      location: "320 West Elberta Drive",
-      name: "Pleasant View City Food Truck Giddy Up"
+      date: "Tomorrow, October 23rd",
+      time: "4-7pm",
+      location: "5098 South 1050 West in Riverdale",
+      name: "We will be at Besst Reality Groups Riverdale office for their Grand Opening!"
+    },
+    {
+      date: "Saturday, October 26th",
+      time: "11am-2pm",
+      location: "950 West Riverdale Road in Riverdale",
+      name: "Wee will be at Ken Garff Honda Riverdale’s Trunk or Treat!"
     }
     // ,
     // {
@@ -56,12 +62,12 @@ export default class FindUs extends Component {
       <div
         className={`page find-us ${
           this.props.isCurrentPage("schedule") ? "current" : "not-current"
-        }`}
+          }`}
       >
         <h2>Where we'll be:</h2>
         <div className="schedule">
           <div className="schedule-wrapper">
-           
+
             {eventRows}
           </div>
         </div>
