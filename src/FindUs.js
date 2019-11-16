@@ -20,12 +20,12 @@ export default class FindUs extends Component {
       name: "Event:"
     },
 
-    {
-      date: "Saturday, October 26th",
-      time: "11am-2pm",
-      location: "950 West Riverdale Road in Riverdale",
-      name: "We will be at Ken Garff Honda Riverdale’s Trunk or Treat!"
-    }
+//     {
+//       date: "Saturday, October 26th",
+//       time: "11am-2pm",
+//       location: "950 West Riverdale Road in Riverdale",
+//       name: "We will be at Ken Garff Honda Riverdale’s Trunk or Treat!"
+//     }
     // ,
     // {
     //   date: "August 17th",
