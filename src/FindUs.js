@@ -26,7 +26,7 @@ export default class FindUs extends Component {
 //       location: "950 West Riverdale Road in Riverdale",
 //       name: "We will be at Ken Garff Honda Riverdale’s Trunk or Treat!"
 //     }
-    // ,
+//     ,
     // {
     //   date: "August 17th",
     //   time: "12-8 pm",
@@ -39,6 +39,7 @@ export default class FindUs extends Component {
     console.log(this.props);
 
     let eventRows = this.events.map(event => (
+      (!this.events || this.events === 0) ? (
       <section className="row">
         <div className="bullet-truck" />
         <div className="event-name">{event.name}</div>
@@ -50,7 +51,7 @@ export default class FindUs extends Component {
           <div className="date">{event.date}</div>
           <div className="time">{event.time}</div>
         </div>
-      </section>
+      </section> ) : 'There are no events currently planned. Please check back soon!'
     ));
 
     return (
