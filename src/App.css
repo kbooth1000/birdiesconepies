@@ -53,7 +53,8 @@ h2 {
 
 main {
   max-width: 1200px;
-  margin: 7rem auto 4rem;
+  margin: 7rem auto 16rem; 
+  /* margin-bottom: 4rem; NON-UNDER-CONSTRUCTION VALUE */
   padding: 0 2rem;
 }
 
