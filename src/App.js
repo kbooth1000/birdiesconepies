@@ -12,7 +12,7 @@ import Catering from "./Catering";
 import Contact from "./Contact";
 import Gallery from "./Gallery";
 import Map from "./Map";
-import TempHomeContent from "./TempHomeContent";
+import UnderConstructionPage from "./UnderConstructionPage";
 
 import "./App.css";
 
@@ -49,10 +49,10 @@ class App extends Component {
               location.pathname !== "/" ? <Nav /> : null
             }
           /> */}
-          <Nav />
+          {/* <Nav /> */}
 
           <main>
-            <Route path="/" exact component={HomeContent} />
+            <Route path="/" exact component={UnderConstructionPage} />
             <Route path="/under-construction" exact component={HomeContent} />
             <Route path="/menu" exact render={() => <Menu isCurrentPage={() => this.isCurrentPage('menu')} setPage={page => this.setPage(page)} />} />
             <Route path="/about" exact render={() => <About isCurrentPage={() => this.isCurrentPage('about')} setPage={page => this.setPage(page)} />} />
